@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Calculadora de Juros Compostos | Simule seu Investimento Online Grátis</title>
+    <meta name="description" content="Calculadora de juros compostos gratuita e online. Simule o crescimento do seu investimento com aportes mensais, veja a evolução mês a mês e descubra o poder dos juros sobre juros. Ferramenta rápida, precisa e fácil de usar.">
+    <meta name="keywords" content="calculadora juros compostos, simulador investimento, juros sobre juros, calculadora financeira, investimento mensal, rendimento poupança, calculadora renda fixa, aporte mensal, montante final, taxa de juros">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Calculadora de Juros Compostos">
+    <link rel="canonical" href="https://calculadora-juros-compostos.com.br/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculadora-juros-compostos.com.br/">
+    <meta property="og:title" content="Calculadora de Juros Compostos | Simule seu Investimento">
+    <meta property="og:description" content="Simule o crescimento do seu investimento com juros compostos. Veja a evolução mês a mês com aportes mensais. Ferramenta gratuita e online.">
+    <meta property="og:image" content="https://calculadora-juros-compostos.com.br/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Calculadora de Juros Compostos">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://calculadora-juros-compostos.com.br/">
+    <meta name="twitter:title" content="Calculadora de Juros Compostos | Simule seu Investimento">
+    <meta name="twitter:description" content="Simule o crescimento do seu investimento com juros compostos. Ferramenta gratuita e online.">
+    <meta name="twitter:image" content="https://calculadora-juros-compostos.com.br/assets/og-image.png">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Calculadora de Juros Compostos",
+        "url": "https://calculadora-juros-compostos.com.br/",
+        "description": "Calculadora de juros compostos gratuita e online. Simule o crescimento do seu investimento com aportes mensais e veja a evolução detalhada mês a mês.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL"
+        },
+        "inLanguage": "pt-BR",
+        "browserRequirements": "Requires JavaScript. Requires HTML5."
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "O que são juros compostos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Juros compostos são juros calculados sobre o montante acumulado, incluindo os juros anteriores. Diferente dos juros simples, nos compostos seus rendimentos também geram rendimentos — o chamado 'juros sobre juros', que faz seu dinheiro crescer exponencialmente ao longo do tempo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como calcular juros compostos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A fórmula dos juros compostos é M = C × (1 + i)^t, onde M é o montante final, C é o capital inicial, i é a taxa de juros (decimal) e t é o tempo. Com aportes mensais, cada aporte rende juros pelo período restante."
+            },
+            {
+                "@type": "Question",
+                "name": "Qual a diferença entre juros simples e compostos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nos juros simples, os juros são calculados apenas sobre o capital inicial, resultando em crescimento linear. Nos juros compostos, os juros incidem sobre o saldo total (capital + juros acumulados), gerando crescimento exponencial e rendimentos maiores a longo prazo."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0f7b4f">
+    <meta name="msapplication-TileColor" content="#0f7b4f">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Decorative Background Elements -->
+    <div class="bg-decoration" aria-hidden="true">
+        <div class="bg-blob bg-blob-1"></div>
+        <div class="bg-blob bg-blob-2"></div>
+        <div class="bg-blob bg-blob-3"></div>
+        <div class="bg-grid"></div>
+    </div>
+
+    <!-- Header / App Bar -->
+    <header class="app-bar" role="banner">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <div class="app-icon" aria-hidden="true">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div>
+                    <h1 class="app-title">Juros Compostos</h1>
+                    <p class="app-subtitle">Simulador de Investimentos</p>
+                </div>
+            </div>
+            <button class="btn-theme-toggle" id="btn-theme" aria-label="Alternar modo escuro" title="Alternar modo escuro">
+                <i class="bi bi-moon-stars-fill"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-4 my-lg-5" role="main">
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Calculator Card -->
+            <div class="col-12 col-lg-5">
+                <section class="glass-card" aria-label="Formulário de cálculo">
+                    <div class="card-header-modern">
+                        <div class="card-header-icon" aria-hidden="true">
+                            <i class="bi bi-calculator-fill"></i>
+                        </div>
+                        <div>
+                            <h2 class="card-header-title">Calculadora</h2>
+                            <p class="card-header-sub">Preencha os dados do investimento</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body-modern">
+                        <form id="calculator-form" novalidate aria-label="Calculadora de juros compostos">
+                            <!-- Capital Inicial -->
+                            <div class="form-group-modern mb-4">
+                                <label for="capital" class="form-label-modern">
+                                    <i class="bi bi-cash-stack me-2" aria-hidden="true"></i>Capital Inicial (R$)
+                                </label>
+                                <div class="input-group input-group-modern">
+                                    <span class="input-group-text-modern"><i class="bi bi-currency-dollar" aria-hidden="true"></i></span>
+                                    <input type="number" class="form-control form-control-modern" id="capital" placeholder="Ex: 1.000,00" min="0.01" step="0.01" required aria-describedby="capital-help" inputmode="decimal">
+                                </div>
+                                <div class="invalid-feedback" role="alert">Informe um capital inicial válido maior que zero.</div>
+                            </div>
+
+                            <!-- Taxa de Juros -->
+                            <div class="form-group-modern mb-4">
+                                <label for="taxa" class="form-label-modern">
+                                    <i class="bi bi-percent me-2" aria-hidden="true"></i>Taxa de Juros (% ao mês)
+                                </label>
+                                <div class="input-group input-group-modern">
+                                    <span class="input-group-text-modern"><i class="bi bi-graph-up" aria-hidden="true"></i></span>
+                                    <input type="number" class="form-control form-control-modern" id="taxa" placeholder="Ex: 0,5" min="0.01" step="0.01" required aria-describedby="taxa-help" inputmode="decimal">
+                                    <span class="input-group-text-modern">% a.m</span>
+                                </div>
+                                <div class="invalid-feedback" role="alert">Informe uma taxa de juros válida maior que zero.</div>
+                            </div>
+
+                            <!-- Tempo -->
+                            <div class="form-group-modern mb-4">
+                                <label for="tempo" class="form-label-modern">
+                                    <i class="bi bi-calendar-event me-2" aria-hidden="true"></i>Tempo (meses)
+                                </label>
+                                <div class="input-group input-group-modern">
+                                    <span class="input-group-text-modern"><i class="bi bi-clock-history" aria-hidden="true"></i></span>
+                                    <input type="number" class="form-control form-control-modern" id="tempo" placeholder="Ex: 12" min="1" step="1" required aria-describedby="tempo-help" inputmode="numeric">
+                                    <span class="input-group-text-modern">meses</span>
+                                </div>
+                                <div class="invalid-feedback" role="alert">Informe um período válido de pelo menos 1 mês.</div>
+                            </div>
+
+                            <!-- Aporte Mensal -->
+                            <div class="form-group-modern mb-4">
+                                <label for="aporte" class="form-label-modern">
+                                    <i class="bi bi-plus-circle me-2" aria-hidden="true"></i>Aporte Mensal (R$) <span class="optional-badge">Opcional</span>
+                                </label>
+                                <div class="input-group input-group-modern">
+                                    <span class="input-group-text-modern"><i class="bi bi-currency-dollar" aria-hidden="true"></i></span>
+                                    <input type="number" class="form-control form-control-modern" id="aporte" placeholder="Ex: 200,00" min="0" step="0.01" inputmode="decimal">
+                                </div>
+                                <div class="form-text-modern">Adicione um aporte mensal para simular investimentos recorrentes.</div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="d-grid gap-2 d-md-flex">
+                                <button type="submit" class="btn btn-primary-modern flex-fill" aria-label="Calcular juros compostos">
+                                    <i class="bi bi-calculator me-2" aria-hidden="true"></i>Calcular
+                                </button>
+                                <button type="button" id="btn-limpar" class="btn btn-outline-modern" aria-label="Limpar formulário" title="Limpar dados">
+                                    <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Info Card -->
+                <section class="glass-card mt-4" aria-label="Dica sobre juros compostos">
+                    <div class="card-body-modern">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="info-icon-wrap" aria-hidden="true">
+                                <i class="bi bi-lightbulb-fill"></i>
+                            </div>
+                            <div>
+                                <h3 class="info-title-modern">Dica de Investimento</h3>
+                                <p class="info-text-modern mb-0">
+                                    Juros compostos são calculados sobre o montante acumulado, não apenas sobre o capital inicial. 
+                                    Isso significa que seus rendimentos também geram rendimentos ao longo do tempo — o chamado <strong>"juros sobre juros"</strong>.
+                                    Albert Einstein chamou os juros compostos de <em>"a oitava maravilha do mundo"</em>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Results Section -->
+            <div class="col-12 col-lg-7" id="resultados-container" style="display: none;" aria-label="Resultados do cálculo">
+                <!-- Main Result -->
+                <section class="glass-card result-card animate-in">
+                    <div class="card-header-modern">
+                        <div class="card-header-icon" aria-hidden="true">
+                            <i class="bi bi-trophy-fill"></i>
+                        </div>
+                        <div>
+                            <h2 class="card-header-title">Resultado</h2>
+                            <p class="card-header-sub">Projeção do seu investimento</p>
+                        </div>
+                    </div>
+                    <div class="card-body-modern text-center">
+                        <p class="result-label">Montante Final</p>
+                        <div class="result-value" id="montante-final" aria-live="polite">R$ 0,00</div>
+                        <div class="result-divider"></div>
+                        <div class="row g-3 mt-2">
+                            <div class="col-6 col-md-4">
+                                <div class="mini-stat">
+                                    <i class="bi bi-cash-stack" aria-hidden="true"></i>
+                                    <span class="mini-label">Capital</span>
+                                    <span class="mini-value" id="capital-investido">R$ 0,00</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="mini-stat">
+                                    <i class="bi bi-coin" aria-hidden="true"></i>
+                                    <span class="mini-label">Aportes</span>
+                                    <span class="mini-value" id="total-aportes">R$ 0,00</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="mini-stat mini-stat-highlight">
+                                    <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+                                    <span class="mini-label">Juros Totais</span>
+                                    <span class="mini-value" id="juros-totais">R$ 0,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chart Section -->
+                <section class="glass-card mt-4 animate-in" style="animation-delay: 0.1s;" aria-label="Gráfico de evolução">
+                    <div class="card-header-modern">
+                        <div class="card-header-icon" aria-hidden="true">
+                            <i class="bi bi-bar-chart-line-fill"></i>
+                        </div>
+                        <div>
+                            <h2 class="card-header-title">Gráfico de Evolução</h2>
+                            <p class="card-header-sub">Crescimento patrimonial ao longo do tempo</p>
+                        </div>
+                    </div>
+                    <div class="card-body-modern">
+                        <canvas id="chart-evolucao" width="600" height="300" role="img" aria-label="Gráfico mostrando a evolução do investimento ao longo dos meses"></canvas>
+                    </div>
+                </section>
+
+                <!-- Monthly Breakdown Table -->
+                <section class="glass-card mt-4 animate-in" style="animation-delay: 0.2s;" aria-label="Tabela de evolução mensal">
+                    <div class="card-header-modern">
+                        <div class="card-header-icon" aria-hidden="true">
+                            <i class="bi bi-table"></i>
+                        </div>
+                        <div>
+                            <h2 class="card-header-title">Evolução Mensal</h2>
+                            <p class="card-header-sub">Detalhamento mês a mês</p>
+                        </div>
+                    </div>
+                    <div class="card-body-modern p-0">
+                        <div class="table-responsive-modern" style="max-height: 400px;">
+                            <table class="table table-modern mb-0" id="tabela-evolucao" aria-label="Tabela de evolução mensal do investimento">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>Mês</th>
+                                        <th scope="col"><i class="bi bi-cash-stack me-1" aria-hidden="true"></i>Capital</th>
+                                        <th scope="col"><i class="bi bi-currency-dollar me-1" aria-hidden="true"></i>Aporte</th>
+                                        <th scope="col"><i class="bi bi-graph-up me-1" aria-hidden="true"></i>Juros</th>
+                                        <th scope="col"><i class="bi bi-wallet2 me-1" aria-hidden="true"></i>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabela-corpo">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Summary Info -->
+                <section class="glass-card mt-4 animate-in" style="animation-delay: 0.3s;" aria-label="Resumo do investimento">
+                    <div class="card-body-modern">
+                        <div class="row g-4 text-center">
+                            <div class="col-6 col-md-3">
+                                <div class="summary-item">
+                                    <div class="summary-icon" aria-hidden="true"><i class="bi bi-calendar-check"></i></div>
+                                    <div class="summary-label">Período</div>
+                                    <div class="summary-value" id="resumo-periodo">0 meses</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="summary-item">
+                                    <div class="summary-icon" aria-hidden="true"><i class="bi bi-percent"></i></div>
+                                    <div class="summary-label">Taxa</div>
+                                    <div class="summary-value" id="resumo-taxa">0% a.m</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="summary-item">
+                                    <div class="summary-icon" aria-hidden="true"><i class="bi bi-piggy-bank"></i></div>
+                                    <div class="summary-label">Investido</div>
+                                    <div class="summary-value" id="resumo-investido">R$ 0,00</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="summary-item">
+                                    <div class="summary-icon" aria-hidden="true"><i class="bi bi-trophy"></i></div>
+                                    <div class="summary-label">Rendimento</div>
+                                    <div class="summary-value" id="resumo-rendimento">R$ 0,00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Empty State -->
+            <div class="col-12 col-lg-7" id="empty-state" aria-label="Estado inicial">
+                <div class="empty-state-card">
+                    <div class="empty-icon" aria-hidden="true">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+                    <h3>Pronto para calcular?</h3>
+                    <p>Preencha os dados no formulário ao lado e visualize a projeção detalhada do seu investimento com juros compostos.</p>
+                    <div class="empty-features">
+                        <span><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Projeção mensal</span>
+                        <span><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Gráfico interativo</span>
+                        <span><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Aportes recorrentes</span>
+                        <span><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Resultado detalhado</span>
+                    </div>
+                    
+                    <!-- SEO Content: FAQ Section -->
+                    <section class="faq-section mt-5" aria-label="Perguntas frequentes">
+                        <h4 class="faq-title"><i class="bi bi-question-circle me-2" aria-hidden="true"></i>Perguntas Frequentes</h4>
+                        <div class="faq-item">
+                            <h5 class="faq-question">O que são juros compostos?</h5>
+                            <p class="faq-answer">Juros compostos são calculados sobre o montante acumulado, incluindo os juros anteriores. Ao contrário dos juros simples, nos compostos seus rendimentos geram novos rendimentos — o chamado "juros sobre juros", que permite ao seu patrimônio crescer de forma exponencial ao longo do tempo.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5 class="faq-question">Como funciona a calculadora?</h5>
+                            <p class="faq-answer">Insira o capital inicial, a taxa de juros mensal, o período em meses e, opcionalmente, um aporte mensal. A ferramenta calcula o montante final usando a fórmula M = C × (1 + i)^t, com juros aplicados mês a mês sobre o saldo acumulado.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5 class="faq-question">Qual a diferença entre juros simples e compostos?</h5>
+                            <p class="faq-answer">Nos juros simples, os juros incidem apenas sobre o capital inicial (crescimento linear). Nos compostos, os juros incidem sobre o saldo total acumulado (crescimento exponencial). A longo prazo, a diferença é significativa — os juros compostos rendem muito mais.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="footer-text mb-0"><i class="bi bi-heart-fill text-danger me-1" aria-hidden="true"></i> Calculadora de Juros Compostos</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="footer-text mb-0">Simulador gratuito de investimentos</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
